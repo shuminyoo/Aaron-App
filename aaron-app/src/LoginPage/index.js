@@ -110,7 +110,7 @@ function LoginPage() {
                 </LabelWrapper>
 
                 <LabelWrapper>
-                <LoginButton>Log In</LoginButton>
+                 <LoginButton>Log In</LoginButton>
                 </LabelWrapper>
             
             </RightWrapper>
