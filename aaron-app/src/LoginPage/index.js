@@ -16,6 +16,7 @@ const LeftWrapper = styled.div`
     // background-image: url("https://images.pexels.com/photos/3671142/pexels-photo-3671142.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
     width: 50%;
     // background-color: blue;
+    padding-right: 10px;
 `;
 
 const TheLeft = styled.h1`
@@ -45,6 +46,7 @@ const TheRight = styled.h1`
 
 const LabelWrapper = styled.div`
     display:flex;
+    flex-direction: row;
     justify-content:center;
 `;
 const LabelforLogin = styled.label`
@@ -83,7 +85,11 @@ const PasswordInput = styled.input`
 
 const LoginButton = styled.button`
     font-size: 15px;
-    width: 20%;
+    color: white;
+    background-color: navy;
+    border: 1px solid white;
+    border-radius: 5%;
+    width: 25%;
     margin-top: 30px;
 `;
 
