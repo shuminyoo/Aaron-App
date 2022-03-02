@@ -15,6 +15,7 @@ const Container = styled.div`
 const LeftWrapper = styled.div` 
     // background-image: url("https://images.pexels.com/photos/3671142/pexels-photo-3671142.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
     width: 50%;
+    // background-color: blue;
 `;
 
 const TheLeft = styled.h1`
@@ -26,10 +27,12 @@ const TheLeft = styled.h1`
 `;
 
 const RightWrapper = styled.div`
+    z-index: 0;
     width: 50%;
     display:flex;
     flex-direction:column;
-    // background-color: darkgreen;
+    // background-color: grey;
+    // opacity: 0.2;
 `;
 const TheRight = styled.h1`
     margin-top: 200px;
@@ -55,12 +58,13 @@ const LabelforLogin = styled.label`
 `;
 
 const UsernameInput = styled.input`
-
+    margin-left: 15px;
     // width: 60%;
     // height: 2.5%;
 
 `;
 const LabelforPassword= styled.label`
+    margin-top: 30px;
     font-size: 30px;
     font-weight: bold;
     color: white;
@@ -71,10 +75,17 @@ const LabelforPassword= styled.label`
 `;
 
 const PasswordInput = styled.input`
+    margin-left: 15px;
+    margin-top: 30px;
     // width: 60%;
     // height: 2.5%;
 `;
 
+const LoginButton = styled.button`
+    font-size: 15px;
+    width: 20%;
+    margin-top: 30px;
+`;
 
 function LoginPage() {
 
@@ -96,6 +107,10 @@ function LoginPage() {
                 <LabelWrapper>
                  <LabelforPassword for="sec">Password</LabelforPassword>
                  <PasswordInput type="password" id="sec"></PasswordInput>
+                </LabelWrapper>
+
+                <LabelWrapper>
+                <LoginButton>Log In</LoginButton>
                 </LabelWrapper>
             
             </RightWrapper>
