@@ -1,6 +1,5 @@
-import styled from "styled-components";
-//styled should match with the others
-
+import styled from "styled-components"; //styled should match with the others
+import React, { useState } from "react";
 
 
 const Container = styled.div`
@@ -94,6 +93,20 @@ const LoginButton = styled.button`
 `;
 
 function LoginPage() {
+    const [user, setUser] = useState({
+        email: "",
+        password: "",
+    });
+    // user.email // this is const {email, password} = user;
+    // user.password
+    const { email, password } = user; //creats a function which routes to mainpage
+    function  navtoMainPage() {
+        
+        alert("hi")
+    }
+    // const navtoMainPage = () => { 
+    //     alert("No")
+    // }; //Function moves to Mainpage??
 
     return ( 
         <Container>
@@ -106,17 +119,17 @@ function LoginPage() {
                 <TheRight>Welcome back.</TheRight> 
 
                 <LabelWrapper>
-                 <LabelforLogin for="user">Email Address</LabelforLogin>
+                 <LabelforLogin>Email Address</LabelforLogin>
                  <UsernameInput type="text" id="user"></UsernameInput>
                 </LabelWrapper>
             
                 <LabelWrapper>
-                 <LabelforPassword for="sec">Password</LabelforPassword>
+                 <LabelforPassword>Password</LabelforPassword>
                  <PasswordInput type="password" id="sec"></PasswordInput>
                 </LabelWrapper>
 
                 <LabelWrapper>
-                 <LoginButton>Log In</LoginButton>
+                 <LoginButton onClick={navtoMainPage}>Log In</LoginButton> 
                 </LabelWrapper>
             
             </RightWrapper>
