@@ -1,5 +1,6 @@
 import styled from "styled-components"; //styled should match with the others
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 
 const Container = styled.div`
@@ -88,25 +89,39 @@ const LoginButton = styled.button`
     background-color: navy;
     border: 1px solid white;
     border-radius: 5%;
+    height: 70%;
     width: 25%;
     margin-top: 30px;
 `;
 
 function LoginPage() {
+    const history = useHistory() //variable can be any name
+
     const [user, setUser] = useState({
         email: "",
         password: "",
     });
+
     // user.email // this is const {email, password} = user;
-    // user.password
+    // user.password //First load, needs to be empty but when user types, it needs to store the info
+    //States will ve filled in when the user does not specifiy
+
+
     const { email, password } = user; //creats a function which routes to mainpage
-    function  navtoMainPage() {
-        
-        alert("hi")
+    const  navtoMainPage = () =>  {
+        alert("move?")
+        history.push("/main")
     }
-    // const navtoMainPage = () => { 
-    //     alert("No")
-    // }; //Function moves to Mainpage??
+
+    const putUserInfo = (e) => { //e stand for events
+        const { name, value } = e.target;
+        console.log(user)
+        setUser ({
+            ...user, //command that add string, only for DOM
+            [name] : value,
+        })
+    };
+
 
     return ( 
         <Container>
@@ -120,12 +135,21 @@ function LoginPage() {
 
                 <LabelWrapper>
                  <LabelforLogin>Email Address</LabelforLogin>
-                 <UsernameInput type="text" id="user"></UsernameInput>
+                 {/* //going to replace empty string forom above to input by the user * */}
+                 <UsernameInput 
+                 type = "text" 
+                 value = {email} 
+                 name = "email"
+                 onChange = {putUserInfo} ></UsernameInput>
                 </LabelWrapper>
             
                 <LabelWrapper>
                  <LabelforPassword>Password</LabelforPassword>
-                 <PasswordInput type="password" id="sec"></PasswordInput>
+                 <PasswordInput 
+                 type = "password" 
+                 value = {password}
+                 name = "password"
+                 onChange = {putUserInfo} ></PasswordInput>
                 </LabelWrapper>
 
                 <LabelWrapper>
