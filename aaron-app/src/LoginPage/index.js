@@ -108,9 +108,18 @@ function LoginPage() {
 
 
     const { email, password } = user; //creats a function which routes to mainpage
-    const  navtoMainPage = () =>  {
-        alert("move?")
-        history.push("/main")
+    const  navtoMainPage = () =>  { 
+        if (email === "shuminyoo@naver.com" && password === "0000") {
+            alert("You may log in!!")
+            history.push("/main") //move to next page
+            return ;
+        } else if(email === "" || password === "") {
+            alert("Please enter Email or password")
+            return ;
+        } else {
+            alert("Email or Password is incorrect. Please try again.")
+        }
+        //if id and email is empty and password is empty, alert, //other if id is equal to name and password is 1234, alert
     }
 
     const putUserInfo = (e) => { //e stand for events
@@ -126,7 +135,7 @@ function LoginPage() {
     return ( 
         <Container>
             <LeftWrapper>
-            <TheLeft>Connecting rail to you.</TheLeft> 
+            <TheLeft>Aaron's Webpage.</TheLeft> 
             </LeftWrapper>
             
             <RightWrapper>
