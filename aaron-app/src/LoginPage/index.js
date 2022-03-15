@@ -110,11 +110,11 @@ function LoginPage() {
     const { email, password } = user; //creats a function which routes to mainpage
     const  navtoMainPage = () =>  { 
         if (email === "shuminyoo@naver.com" && password === "0000") {
-            alert("You may log in!!")
+            alert("Email and Password is correct.")
             history.push("/main") //move to next page
             return ;
         } else if(email === "" || password === "") {
-            alert("Please enter Email or password")
+            alert("Please enter Email or Password")
             return ;
         } else {
             alert("Email or Password is incorrect. Please try again.")

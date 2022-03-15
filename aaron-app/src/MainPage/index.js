@@ -28,7 +28,7 @@ const Welcome = styled.h1`
     top: 230px; 
     color:white;
     font-size: 40px;
-    text-shadow: 9px 9px 10px black;
+    text-shadow: 9px 6px 12px black;
 
 `;
 
