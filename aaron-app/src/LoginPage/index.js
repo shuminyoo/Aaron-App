@@ -10,6 +10,7 @@ const Container = styled.div`
     // background-color: #cdf7f3;
     display: flex; 
     flex-directionn: row;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
 `;
 
 const LeftWrapper = styled.div` 
