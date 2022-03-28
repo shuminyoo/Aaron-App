@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import { useHistory } from "react-router-dom";
 
 
 const Container = styled.div`
@@ -12,7 +12,26 @@ const Container = styled.div`
     background-repeat: no-repeat;
 
 `
+const ProfileWrapper = styled.div`
+    display:flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+    // border:3px solid black;
+`
+const MyFace = styled.p`
+    // background-color:blue;
+    position: absolute;
+    top :20%;
+    left: 45%;
+    background-image: url("https://images.pexels.com/photos/3779187/pexels-photo-3779187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    width: 170px;
+    height: 170px;
+    border-radius: 80px;
+    box-shadow: 3px 3px 10px black;
 
+`
 const Title = styled.h1`
     position: relative;
     text-align: center;
@@ -50,6 +69,7 @@ const Socials = styled.div`
     top: 220px;
     // border:3px solid black;
 `
+
 const Insta = styled.a`
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png");
     background-size: cover;
@@ -79,10 +99,38 @@ const Youtube = styled.a`
     height: 50px;
     border-radius: 10px;
 `
+const ButtonWrapper = styled.div`
+    display:flex;
+    justify-content: center;
+    position: relative;
+    top: 240px;
+    // border:3px solid black;
+`
 
+const Button = styled.button`
+    font-size: 15px;
+    color: white;
+    background-color: #155453;
+    border: 1px solid white;
+    border-radius: 5%;
+    height: 5%;
+    width: 10%;
+`
 function MainPage() {
+    const history = useHistory()
+
+    const  navtoLearn = () =>  { 
+            alert("Moving to Learn...")
+            history.push("/learn")
+            return ;
+    }
     return (
         <Container>
+
+            <ProfileWrapper>
+                <MyFace></MyFace>
+            </ProfileWrapper>
+            
             <Title>Aaron's Personal Webpage</Title><br></br>
             <Welcome>Student at BCC | Amateur Photographer | History Enthusiast</Welcome>
             <Bar></Bar>
@@ -93,6 +141,11 @@ function MainPage() {
                 <Pexels href="https://www.pexels.com/@shumin-yoo-139936891/collections/"></Pexels>
                 <Youtube href="https://youtu.be/dQw4w9WgXcQ?t=1"></Youtube>
             </Socials> 
+
+            <ButtonWrapper>
+                <Button onClick={navtoLearn}>Learn More</Button>
+            </ButtonWrapper>
+            
         </Container>
 
     )
