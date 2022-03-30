@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const Container = styled.div`
-    background-color: #F4F3EF
+    background-color: #F4F3EF;
     width: auto;
     height: 100vh;
     display: flex; 
@@ -12,17 +12,11 @@ const Container = styled.div`
 const TextWrapper = styled.div`
     width: 50%;
     padding-left: 10px;
-    background-color:yellow;
 `
 const Welcome = styled.h3`
     padding-top: 30%;
     color:black;
 
-`
-
-const Testbox = styled.p`
-    background-color:blue;
-    color:white;
 `
 const Bar_1 = styled.p`
     position: relative;
@@ -41,11 +35,12 @@ const Bar_2 = styled.p`
     border-radius: 30px;
 `
 const Info = styled.p`
+    color: #818181;
 `
 
 
 const ContactsWrapper = styled.div`
-    background-color: #F4F3EF
+    background-color: #F4F3EF;
     width: auto;
     height: 100vh;
     display: flex; 
@@ -90,11 +85,16 @@ const DOB_A = styled.p`
 const PictureWrapper = styled.div`
     width: 50%;
     padding-right: 10px;
+
 `
-const Image = styled.p`
-    width:80%;
-    height:auto;
+const Image = styled.div`
+    background-image: url("Face.jpeg")
+    background-color: blue;
+    width: 50%;
+    margin-top: 30%;
+
 `
+
 
 
 
@@ -143,7 +143,7 @@ function LearnPage() {
             </TextWrapper>
 
             <PictureWrapper>
-                <Image src="Face_1.png">Testing</Image>
+                <Image>TestingTestingTestingTesting</Image>
             </PictureWrapper>
 
         </Container>
