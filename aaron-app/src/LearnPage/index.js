@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Me from "./Face.jpeg"
 
 const Container = styled.div`
     background-color: #F4F3EF;
@@ -22,7 +23,7 @@ const Bar_1 = styled.p`
     position: relative;
     justify-content: center;
     background-color:black;
-    height: 7px;
+    height: 4px;
     width: 80%;
     border-radius: 30px;
 `
@@ -30,7 +31,7 @@ const Bar_2 = styled.p`
     position: relative;
     justify-content: center;
     background-color:black;
-    height: 7px;
+    height: 4px;
     width: 80%;
     border-radius: 30px;
 `
@@ -87,14 +88,21 @@ const PictureWrapper = styled.div`
     padding-right: 10px;
 
 `
-const Image = styled.div`
-    background-image: url("Face.jpeg")
-    background-color: blue;
+// const Image = styled.div`
+//     // background-image: url("./Face.jpeg")
+//     background-color: blue;
+//     width: 50%;
+//     margin-top: 30%;
+
+// `
+
+const MeImage = styled.img`
     width: 50%;
     margin-top: 30%;
-
-`
-
+    margin-left: 25%;
+    border: 3px solid black;
+    border-radius: 10px;
+`;
 
 
 
@@ -143,7 +151,8 @@ function LearnPage() {
             </TextWrapper>
 
             <PictureWrapper>
-                <Image>TestingTestingTestingTesting</Image>
+                {/* <Image>TestingTestingTestingTesting</Image> */}
+                <MeImage src={Me} />
             </PictureWrapper>
 
         </Container>
