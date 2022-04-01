@@ -12,11 +12,12 @@ const Container = styled.div`
 
 const TextWrapper = styled.div`
     width: 50%;
-    padding-left: 10px;
+    padding-left: 20px;
 `
 const Welcome = styled.h3`
     padding-top: 30%;
     color:black;
+    font-family: 'Lobster', cursive;
 
 `
 const Bar_1 = styled.p`
@@ -37,6 +38,8 @@ const Bar_2 = styled.p`
 `
 const Info = styled.p`
     color: #818181;
+    font-family: 'Lobster', cursive;
+    
 `
 
 
