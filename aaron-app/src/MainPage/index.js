@@ -39,6 +39,7 @@ const Title = styled.h1`
     color:white;
     font-size: 75px;
     text-shadow: 9px 9px 10px black;
+    padding-bottom: 30px;
 `;
 
 const Welcome = styled.h1`

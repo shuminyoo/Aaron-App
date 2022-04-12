@@ -85,7 +85,7 @@ const PasswordInput = styled.input`
 `;
 
 const LoginButton = styled.button`
-    font-size: 15px;
+    font-size: 25px;
     color: white;
     background-color: navy;
     border: 1px solid white;
