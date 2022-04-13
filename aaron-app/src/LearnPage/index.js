@@ -154,10 +154,10 @@ const AwardImage = styled.img`
     width:150px;
     height:150px;
     border:1px solid black;
-    border-radius:2px;
+    border-radius:5px;
 `
 const AwardLabel = styled.p`
-    color: #818181;
+    color: #5171db;
     font-family: 'Lobster', cursive;
     
 `
@@ -296,15 +296,15 @@ function LearnPage() {
                 
                 <RowofAward>
                     <Award>
-                        <AwardImage></AwardImage>
+                        <AwardImage src="http://www.lila.es.kr/data/cheditor4/1711/ebec5abb57d7fa3ae5c6c1094a9b6b97_20171115105837_zypqmvwt.jpg"></AwardImage>
                         <AwardLabel>Golden Bell Award</AwardLabel>
                     </Award>
                     <Award>
-                        <AwardImage></AwardImage>
+                        <AwardImage src="https://img.danawa.com/images/descFiles/4/397/3396656_1497000996212.png"></AwardImage>
                         <AwardLabel>BCC Honor Student</AwardLabel>
                     </Award>
                     <Award>
-                        <AwardImage></AwardImage>
+                        <AwardImage src="https://as1.ftcdn.net/v2/jpg/02/52/27/26/1000_F_252272632_AktibshzaSMfZdNaFJTZNMa8z1u64OP5.jpg"></AwardImage>
                         <AwardLabel>National Clown Award</AwardLabel>
                     </Award>
                 </RowofAward>
