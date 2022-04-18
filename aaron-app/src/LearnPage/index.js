@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Me from "./Face.jpeg"
+import CodeImage from "./CodeImage_1.jpeg"
 import { ProgressBar, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
@@ -132,7 +133,7 @@ const SampleText = styled.p`
     margin-right: 50px;
 `
 
-const BajaContainerSur = styled.div`
+const BajaContainer = styled.div`
     background-color: #81d3e3;
     display: flex;
     flex-direction: column;
@@ -160,6 +161,19 @@ const AwardLabel = styled.p`
     color: #5171db;
     font-family: 'Lobster', cursive;
     
+`
+
+const BajaContainerSur = styled.div`
+    background-color: #294C60;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
+const WorkImage1 = styled.img`
+    width: 50%;
+    border: 3px solid black;
+    border-radius: 10px;
 `
 
 function LearnPage() {
@@ -290,7 +304,7 @@ function LearnPage() {
             </RowContainer>
         </UnderContainer>
 
-        <BajaContainerSur>
+        <BajaContainer>
 
                 <Title>Awards</Title>
                 
@@ -309,7 +323,19 @@ function LearnPage() {
                     </Award>
                 </RowofAward>
 
+        </BajaContainer>
+
+        <BajaContainerSur>
+            <Title>Works</Title>
+
+            <PictureWrapper>
+                <WorkImage1 src={WorkImage1} />
+            </PictureWrapper>
+            <PictureWrapper>
+                <MeImage src={Me} />
+            </PictureWrapper>
         </BajaContainerSur>
+
      </SuperContainer>
     )
 }
