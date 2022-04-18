@@ -1,9 +1,11 @@
 import styled from "styled-components"
-import Me from "./Face.jpeg"
-import CodeImage from "./CodeImage_1.jpeg"
 import { ProgressBar, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
+import Me from "./Face.jpeg"
+import CodeImage from "./CodeImage_1.jpeg"
+import ShamazonSurvey from "./WebImage_1.png"
+import ShamazonEats from "./WebImage_2.png"
 
 
 const SuperContainer = styled.div`
@@ -170,12 +172,56 @@ const BajaContainerSur = styled.div`
     justify-content: center;
     align-items: center;
 `
-const WorkImage1 = styled.img`
-    width: 100%;
-    border: 3px solid black;
-    border-radius: 10px;
+const NewPictureWrapper_1 = styled.div`
+    width: 50%;
+    margin-right:200px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+`
+const NewPictureWrapper_2 = styled.div`
+    width: 50%;
+    margin:50px 0px 50px 200px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+`
+const NewPictureWrapper_3 = styled.div`
+    width: 50%;
+    margin:0px 300px 50px 0px;
+    display:flex;
+    flex-direction; row;
+    justify-content: center;
+    align-items: center;
+
 `
 
+const WorkImage1 = styled.img`
+    width: 100%;
+    border: 3px solid white;
+    border-radius: 10px;
+`
+const WorkImage2 = styled.img`
+    width: 130%;
+    border: 3px solid white;
+    border-radius: 10px;
+`
+const ImgDes = styled.p`
+    width: 100%;
+    color: white;
+    padding-left:20px;
+
+`
+const ImgDes_2 = styled.p`
+    height: 100%;
+    color: white;
+    padding-right:20px;
+
+`
 function LearnPage() {
     const barStyle = {
         width: "200px",
@@ -328,12 +374,22 @@ function LearnPage() {
         <BajaContainerSur>
             <Title>Works</Title>
 
-            <PictureWrapper>
+            <NewPictureWrapper_1>
                 <WorkImage1 src={CodeImage} />
-            </PictureWrapper>
-            <PictureWrapper>
-                <WorkImage1 src={CodeImage} />
-            </PictureWrapper>
+                <ImgDes> This is the code of this webpage.</ImgDes>
+            </NewPictureWrapper_1>
+
+            <NewPictureWrapper_2>
+                <ImgDes_2>This is a survey form that I made.</ImgDes_2>
+                <WorkImage2 src={ShamazonSurvey} />
+            </NewPictureWrapper_2>
+
+            <NewPictureWrapper_3>
+                <WorkImage1 src={ShamazonEats} />
+                <ImgDes> This is an online ordering system template that I made.</ImgDes>
+            </NewPictureWrapper_3>
+
+
         </BajaContainerSur>
 
      </SuperContainer>
