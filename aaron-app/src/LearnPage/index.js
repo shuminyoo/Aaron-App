@@ -171,7 +171,7 @@ const BajaContainerSur = styled.div`
     align-items: center;
 `
 const WorkImage1 = styled.img`
-    width: 50%;
+    width: 100%;
     border: 3px solid black;
     border-radius: 10px;
 `
@@ -329,10 +329,10 @@ function LearnPage() {
             <Title>Works</Title>
 
             <PictureWrapper>
-                <WorkImage1 src={WorkImage1} />
+                <WorkImage1 src={CodeImage} />
             </PictureWrapper>
             <PictureWrapper>
-                <MeImage src={Me} />
+                <WorkImage1 src={CodeImage} />
             </PictureWrapper>
         </BajaContainerSur>
 
